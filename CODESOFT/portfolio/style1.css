@@ -1,0 +1,258 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+/* OG Logo Styling */
+.og-logo {
+    position: absolute;
+    top: -20px; /* Adjust vertical position */
+    right: 29px; /* Adjust horizontal position */
+    width: 100px; /* Adjust logo size */
+    height: auto;
+    z-index: 10;
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+}
+
+.og-logo:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .og-logo {
+        top: 10px;
+        right: 10px;
+        width: 60px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #c8e6c9;
+}
+
+/* Section Styles */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* About Section */
+#about h2, #projects h2, #skills h2, #contact h2 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+#about h2::after, 
+#projects h2::after, 
+#skills h2::after,
+#contact h2::after {
+    content: '';
+    width: 50%;
+    height: 4px;
+    background-color: #4CAF50;
+    display: block;
+    margin: 8px auto;
+    border-radius: 5px;
+}
+
+/* Project Section */
+.project-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-item {
+    background-color: #f1f8e9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 320px;
+}
+
+.project-item h3 {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.project-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Skills Section */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    list-style: none;
+}
+
+.skills-list li {
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.skills-list li:hover {
+    background: linear-gradient(135deg, #66BB6A, #4CAF50);
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input, 
+form textarea, 
+form button {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+form button {
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #66BB6A, #4CAF50);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+    }
+
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+}
